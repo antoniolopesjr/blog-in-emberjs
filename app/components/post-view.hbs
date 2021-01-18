@@ -10,10 +10,14 @@
     By:
     {{@post.author}}
   </span>
-  <pre style="white-space: pre-wrap;">
+  <p style="white-space: pre-wrap;">
     {{@post.body}}
-  </pre>
-  <button type="button" {{on "click" (fn this.removePost @post)}}>
+  </p>
+  <button
+    type="button"
+    class="btn btn-secondary"
+    {{on "click" (fn this.removePost @post)}}
+  >
     Remove post
   </button>
 {{/if}}

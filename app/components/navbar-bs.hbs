@@ -1,0 +1,17 @@
+<header>
+  <BsNavbar
+    @type="dark"
+    @backgroundColor="dark"
+    @collapsed={{true}}
+    @onCollapse={{fn (mut this.collapsed) true}}
+    @onExpand={{fn (mut this.collapsed) false}} as |navbar|
+  >
+    <div class="container d-flex">
+      <div class="navbar-header">
+        <LinkTo @route="posts" class="navbar-brand">
+          My Ember blog
+        </LinkTo>
+      </div>
+    </div>
+  </BsNavbar>
+</header>
